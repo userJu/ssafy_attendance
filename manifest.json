@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SSAFY_attendance",
+  "version": "1.0",
+  "description": "check SSAFY attendance",
+  "background": {
+    "service_worker": "./src/background.js"
+  },
+  "permissions": ["storage"],
+
+  "action": {
+    "default_popup": "./src/popup.html",
+    "default_icon": "./images/icon.png"
+  }
+}
