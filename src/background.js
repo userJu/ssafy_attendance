@@ -19,17 +19,43 @@
 
 // chrome.runtime.onMessage.addListener(handleMessage);
 
-let loder;
+///
+// let loder;
 
-function startLoader() {
-  loader = setInterval(async () => {
-    console.log("지금시간은?");
-  }, 2000);
-}
+// function startLoader() {
+//   loader = setInterval(async () => {
+//     console.log("지금시간은?");
+//   }, 2000);
+// }
 
-function stopLoader() {
-  clearInterval(loader);
-  loader = null;
-}
+// function stopLoader() {
+//   clearInterval(loader);
+//   loader = null;
+// }
 
-startLoader();
+// startLoader();
+
+// const Swal = require("sweetalert2");
+// import Swal from "sweetalert2";
+
+// const handleMessage = () => {
+//   alert("Any fool can use a computer");
+// };
+// const sendMessageToCurrentPage = (name, message) => {
+//   chrome.runtime.onMessage.addListener(handleMessage);
+// };
+
+// // const isAttentionTIme = () => {
+// //   chrome.tabs.query({ active });
+// // };
+
+// setInterval(() => {
+//   sendMessageToCurrentPage("firstMessage", "Hi Content Script!");
+// }, 10000);
+
+const send = () => {
+  chrome.runtime.onMessage.addListener((request) => {
+    console.log(request);
+  });
+};
+send();
